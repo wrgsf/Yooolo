@@ -1,0 +1,15 @@
+#[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
+pub struct InstantiateMsg {
+    pub governance: String,
+    pub terraswap_router: String,
+    pub code_id: u64,
+    pub add_pool_fee_rate: Decimal,
+    pub add_pool_min_referral_reward_rate: Decimal,
+    pub remove_pool_fee_rate: Decimal,
+    pub fee_burn_ratio: Decimal,
+    pub fee_recipient: String,
+    pub deactivate_period: u64,
+    pub key_denom: Denom,
+    pub valkyrie_token: String,
+    pub referral_reward_limit_option: ReferralRewardLimitOptionMsg,
+}
